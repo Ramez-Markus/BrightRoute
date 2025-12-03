@@ -17,7 +17,6 @@ public class LectureController {
         this.lectureService = lectureService;
     }
 
-    // ===== Lecture endpoints =====
     @PostMapping
     public Lecture createLecture(@RequestBody Lecture lecture) {
         return lectureService.saveLecture(lecture);

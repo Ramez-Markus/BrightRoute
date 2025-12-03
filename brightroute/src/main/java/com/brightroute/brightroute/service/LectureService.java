@@ -72,3 +72,4 @@ public class LectureService {
                 .orElse(0.0);
     }
 }
+
