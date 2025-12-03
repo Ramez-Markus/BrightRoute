@@ -1,26 +1,32 @@
 package com.brightroute.brightroute.service;
 
-// LecturePartService.java
 import com.brightroute.brightroute.model.LecturePart;
 import com.brightroute.brightroute.repository.LecturePartRepository;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class LecturePartService {
-    private final LecturePartRepository repository;
 
-    public LecturePartService(LecturePartRepository repository) {
-        this.repository = repository;
+    private final LecturePartRepository lecturePartRepository;
+
+    public LecturePartService(LecturePartRepository lecturePartRepository) {
+        this.lecturePartRepository = lecturePartRepository;
     }
 
-    public List<LecturePart> getAllParts() {
-        return repository.findAll();
+    // ===== Get content =====
+    public Object getContent(Long partId) {
+        LecturePart part = lecturePartRepository.findById(partId)
+                .orElseThrow(() -> new RuntimeException("LecturePart not found"));
+        return part.getPartContentUrl(); // رجعنا URL بس لأنه ده اللي موجود
     }
 
-    @SuppressWarnings("null")
-    public LecturePart savePart(LecturePart part) {
-        return repository.save(part);
+    // ===== Update content =====
+    public void updateContent(Long partId, String newContentUrl) {
+        LecturePart part = lecturePartRepository.findById(partId)
+                .orElseThrow(() -> new RuntimeException("LecturePart not found"));
+        part.setPartContentUrl(newContentUrl);
+        lecturePartRepository.save(part);
     }
 }
+
 
