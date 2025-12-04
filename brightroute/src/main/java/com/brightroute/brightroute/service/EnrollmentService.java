@@ -1,7 +1,7 @@
-package enrollment.service;
+package com.brightroute.brightroute.service;
 
-import enrollment.model.Enrollment;
-import enrollment.model.EnrollmentStatus;
+import com.brightroute.brightroute.model.Enrollment;
+import com.brightroute.brightroute.model.EnrollmentStatus;
 
 public interface EnrollmentService {
 

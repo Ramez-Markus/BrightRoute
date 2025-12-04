@@ -1,7 +1,7 @@
-package enrollment.repository;
+package com.brightroute.brightroute.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import enrollment.model.Enrollment;
+import com.brightroute.brightroute.model.Enrollment;
 
 public interface EnrollmentRepository extends JpaRepository<Enrollment, Integer> {
 }
