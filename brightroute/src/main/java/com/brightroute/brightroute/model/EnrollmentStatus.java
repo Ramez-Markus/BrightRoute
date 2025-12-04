@@ -1,4 +1,4 @@
-package enrollment.model;
+package com.brightroute.brightroute.model;
 
 public enum EnrollmentStatus {
     ACTIVE,
