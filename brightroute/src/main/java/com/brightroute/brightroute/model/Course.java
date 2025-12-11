@@ -1,5 +1,6 @@
 package com.brightroute.brightroute.model;
 
+
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 

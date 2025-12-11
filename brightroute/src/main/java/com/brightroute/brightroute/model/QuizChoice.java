@@ -1,6 +1,6 @@
 package com.brightroute.brightroute.model;
-
 import jakarta.persistence.*;
+
 
 @Entity
 @Table(name = "QuizChoice", schema = "quiz")

@@ -1,5 +1,4 @@
 package com.brightroute.brightroute.controller;
-
 import com.brightroute.brightroute.model.Course;
 import com.brightroute.brightroute.service.impl.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;

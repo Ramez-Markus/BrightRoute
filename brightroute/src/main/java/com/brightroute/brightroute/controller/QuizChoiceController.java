@@ -1,5 +1,4 @@
 package com.brightroute.brightroute.controller;
-
 import com.brightroute.brightroute.model.QuizChoice;
 import com.brightroute.brightroute.service.impl.QuizChoiceService;
 import org.springframework.beans.factory.annotation.Autowired;
